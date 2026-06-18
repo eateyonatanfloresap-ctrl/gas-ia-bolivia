@@ -1,1 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Informe Gas IA Bolivia</title>
 
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#071b33;
+    color:white;
+}
+
+header{
+    height:70px;
+    background:#020b16;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 25px;
+    border-bottom:1px solid rgba(77,208,255,.25);
+}
+
+header h1{
+    color:#4dd0ff;
+    font-size:22px;
+}
+
+.btn{
+    padding:12px 22px;
+    border-radius:10px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    margin-left:10px;
+}
+
+.volver{
+    background:#1f2937;
+}
+
+.descargar{
+    background:linear-gradient(135deg,#0d6efd,#00b4d8);
+}
+
+.layout{
+    display:flex;
+    min-height:calc(100vh - 70px);
+}
+
+.sidebar{
+    width:300px;
+    background:#102a4c;
+    padding:25px;
+}
+
+.sidebar h3{
+    color:#4dd0ff;
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+.sidebar a{
+    display:block;
+    color:#d6eaff;
+    text-decoration:none;
+    padding:10px;
+    margin-bottom:8px;
+    border-radius:8px;
+}
+
+.sidebar a:hover{
+    background:#0d6efd;
+    color:white;
+}
+
+.content{
+    flex:1;
+    padding:50px;
+    text-align:center;
+}
+
+.logo{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:25px;
+}
+
+h2{
+    font-size:34px;
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+.linea{
+    height:2px;
+    background:#0d6efd;
+    width:65%;
+    margin:20px auto;
+}
+
+.info{
+    margin-top:25px;
+    color:#d6eaff;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.proyecto{
+    margin-top:40px;
+    font-size:30px;
+    font-weight:bold;
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.pdf{
+    margin-top:40px;
+    width:100%;
+    height:650px;
+    border:none;
+    border-radius:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>GAS IA BOLIVIA — Informe del Proyecto</h1>
+
+    <div>
+        <a class="btn volver" href="index.html">← Volver</a>
+        <a class="btn descargar" href="YONATANFLORES-H5.pdf" download>⬇ Descargar PDF</a>
+    </div>
+</header>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <h3>CONTENIDO</h3>
+
+        <a href="#portada">🏠 Portada</a>
+        <a href="#cap1">CAPÍTULO I</a>
+        <a href="#cap2">CAPÍTULO II</a>
+        <a href="#cap3">CAPÍTULO III</a>
+        <a href="#bibliografia">Bibliografía</a>
+        <a href="#anexos">Anexos</a>
+    </aside>
+
+    <main class="content">
+
+        <section id="portada">
+            <div style="font-size:90px;">🔥</div>
+
+            <h2>UNIVERSIDAD PRIVADA "FRANZ TAMAYO"</h2>
+
+            <div class="linea"></div>
+
+            <div class="info">
+                <p>Facultad de Ingeniería</p>
+                <p><b>Ingeniería en Sistemas</b></p>
+                <p>Ingeniería de Sistemas - ISI-511</p>
+            </div>
+
+            <div class="proyecto">
+                Sistema Inteligente para el Monitoreo, Trazabilidad y Gestión de Garrafas de GLP en Bolivia
+            </div>
+
+            <div class="info">
+                <p><b>Proyecto:</b> Gas IA Bolivia</p>
+                <p><b>Autor:</b> Yonatan Flores Apaza</p>
+                <p><b>Gestión:</b> 2026</p>
+            </div>
+        </section>
+
+        <section id="cap1" style="margin-top:70px;">
+            <h2>CAPÍTULO I</h2>
+            <p class="info">Marco introductorio del proyecto Gas IA Bolivia.</p>
+        </section>
+
+        <section id="cap2" style="margin-top:70px;">
+            <h2>CAPÍTULO II</h2>
+            <p class="info">Marco teórico, fundamentos del sistema web, Laravel, MySQL y GitHub Pages.</p>
+        </section>
+
+        <section id="cap3" style="margin-top:70px;">
+            <h2>CAPÍTULO III</h2>
+            <p class="info">Marco de desarrollo, requisitos, UML, DER, arquitectura y prototipo.</p>
+        </section>
+
+        <section id="bibliografia" style="margin-top:70px;">
+            <h2>BIBLIOGRAFÍA</h2>
+            <p class="info">Fuentes académicas y documentación técnica utilizadas.</p>
+        </section>
+
+        <section id="anexos" style="margin-top:70px;">
+            <h2>ANEXOS</h2>
+            <p class="info">Diagramas, capturas del sistema y evidencias del proyecto.</p>
+        </section>
+
+        <iframe class="pdf" src="YONATANFLORES-H5.pdf"></iframe>
+
+    </main>
+
+</div>
+
+</body>
+</html>
