@@ -9,92 +9,237 @@
 
 ```
 <style>
-    body{
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
         font-family: Arial, sans-serif;
-        margin:0;
-        padding:0;
-        background:#f4f6f9;
+        background: #061529;
+        color: #ffffff;
     }
 
-    header{
-        background:#0d6efd;
-        color:white;
-        text-align:center;
-        padding:40px;
+    header {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #061529, #0b3d91, #071b33);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
     }
 
-    nav{
-        background:#212529;
-        text-align:center;
-        padding:15px;
+    .hero {
+        max-width: 950px;
     }
 
-    nav a{
-        color:white;
-        text-decoration:none;
-        margin:15px;
-        font-weight:bold;
+    .logo {
+        font-size: 70px;
+        margin-bottom: 20px;
     }
 
-    section{
-        padding:30px;
-        max-width:1100px;
-        margin:auto;
+    h1 {
+        font-size: 52px;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
     }
 
-    h2{
-        color:#0d6efd;
+    .resaltado {
+        color: #4dd0ff;
     }
 
-    .botones{
-        text-align:center;
-        margin-top:25px;
+    .subtitulo {
+        font-size: 20px;
+        color: #d6eaff;
+        margin-bottom: 25px;
+        line-height: 1.6;
     }
 
-    .btn{
-        padding:12px 25px;
-        border:none;
-        border-radius:8px;
-        color:white;
-        font-size:16px;
-        cursor:pointer;
-        margin:8px;
+    .tags {
+        margin: 25px 0;
     }
 
-    .azul{
-        background:#0d6efd;
+    .tag {
+        display: inline-block;
+        padding: 9px 18px;
+        border: 1px solid #4dd0ff;
+        border-radius: 30px;
+        margin: 6px;
+        color: #4dd0ff;
+        background: rgba(77, 208, 255, 0.12);
+        font-size: 14px;
     }
 
-    .verde{
-        background:#198754;
+    .botones {
+        margin-top: 35px;
     }
 
-    .rojo{
-        background:#dc3545;
+    .btn {
+        display: inline-block;
+        padding: 14px 28px;
+        border-radius: 12px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 8px;
+        transition: 0.3s;
     }
 
-    .card{
-        background:white;
-        padding:20px;
-        margin:15px 0;
-        border-radius:10px;
-        box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    .btn:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
     }
 
-    img{
-        width:100%;
-        max-width:900px;
-        display:block;
-        margin:20px auto;
-        border-radius:10px;
+    .azul {
+        background: linear-gradient(135deg, #0d6efd, #00b4d8);
     }
 
-    footer{
-        background:#212529;
-        color:white;
-        text-align:center;
-        padding:20px;
-        margin-top:40px;
+    .verde {
+        background: linear-gradient(135deg, #198754, #20c997);
+    }
+
+    .rojo {
+        background: linear-gradient(135deg, #dc3545, #ff7b7b);
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        background: #020b16;
+        padding: 18px;
+        text-align: center;
+        z-index: 100;
+        border-bottom: 1px solid rgba(77, 208, 255, 0.2);
+    }
+
+    nav a {
+        color: #d6eaff;
+        text-decoration: none;
+        margin: 0 14px;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #4dd0ff;
+    }
+
+    section {
+        max-width: 1150px;
+        margin: auto;
+        padding: 70px 25px;
+    }
+
+    h2 {
+        font-size: 34px;
+        color: #4dd0ff;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .texto {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #d6eaff;
+        text-align: center;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 22px;
+        margin-top: 35px;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.08);
+        padding: 25px;
+        border-radius: 18px;
+        border: 1px solid rgba(77, 208, 255, 0.2);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        border-color: #4dd0ff;
+    }
+
+    .card h3 {
+        color: #ffffff;
+        margin-bottom: 12px;
+        font-size: 22px;
+    }
+
+    .card p {
+        color: #c8d8e8;
+        line-height: 1.6;
+    }
+
+    .captura {
+        background: rgba(255, 255, 255, 0.08);
+        padding: 18px;
+        border-radius: 18px;
+        margin-top: 30px;
+        border: 1px solid rgba(77, 208, 255, 0.2);
+    }
+
+    .captura h3 {
+        color: #4dd0ff;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+        max-width: 950px;
+        display: block;
+        margin: auto;
+        border-radius: 15px;
+        box-shadow: 0 10px 35px rgba(0,0,0,0.45);
+    }
+
+    .lista-tecnologias {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+    }
+
+    .tech {
+        background: rgba(77, 208, 255, 0.12);
+        color: #4dd0ff;
+        padding: 12px 20px;
+        border-radius: 25px;
+        border: 1px solid rgba(77, 208, 255, 0.3);
+        font-weight: bold;
+    }
+
+    footer {
+        background: #020b16;
+        text-align: center;
+        padding: 35px 20px;
+        color: #d6eaff;
+        border-top: 1px solid rgba(77, 208, 255, 0.2);
+    }
+
+    @media (max-width: 700px) {
+        h1 {
+            font-size: 36px;
+        }
+
+        .subtitulo {
+            font-size: 17px;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 8px;
+        }
     }
 </style>
 ```
@@ -103,35 +248,30 @@
 
 <body>
 
-<header>
+<header id="inicio">
+    <div class="hero">
+        <div class="logo">🔥</div>
 
 ```
-<h1>🚀 GAS IA BOLIVIA</h1>
+    <h1>GAS IA <span class="resaltado">BOLIVIA</span></h1>
 
-<p>
-    Sistema Inteligente para el Monitoreo y Gestión de Garrafas de GLP en Bolivia
-</p>
+    <p class="subtitulo">
+        Sistema inteligente para el monitoreo, trazabilidad y gestión de garrafas de GLP en Bolivia.
+    </p>
 
-<div class="botones">
+    <div class="tags">
+        <span class="tag">Laravel</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">Monitoreo</span>
+        <span class="tag">Alertas IA</span>
+        <span class="tag">GitHub Pages</span>
+    </div>
 
-    <a href="TU_URL_SISTEMA_AQUI" target="_blank">
-        <button class="btn azul">
-            🖥️ Ver Sistema
-        </button>
-    </a>
-
-    <a href="YONATANFLORES-H5.pdf" target="_blank">
-        <button class="btn verde">
-            📄 Ver Informe
-        </button>
-    </a>
-
-    <a href="YONATANFLORES-H5.pdf" download>
-        <button class="btn rojo">
-            ⬇️ Descargar Informe
-        </button>
-    </a>
-
+    <div class="botones">
+        <a class="btn azul" href="#capturas">🖥️ Ver Sistema</a>
+        <a class="btn verde" href="YONATANFLORES-H5.pdf" target="_blank">📄 Ver Informe</a>
+        <a class="btn rojo" href="YONATANFLORES-H5.pdf" download>⬇️ Descargar Informe</a>
+    </div>
 </div>
 ```
 
@@ -141,136 +281,126 @@
     <a href="#inicio">Inicio</a>
     <a href="#proyecto">Proyecto</a>
     <a href="#modulos">Módulos</a>
-    <a href="#capturas">Capturas</a>
+    <a href="#capturas">Sistema</a>
     <a href="#tecnologias">Tecnologías</a>
     <a href="#equipo">Equipo</a>
 </nav>
 
-<section id="inicio">
+<section id="proyecto">
+    <h2>Información del Proyecto</h2>
 
 ```
-<h2>Bienvenido</h2>
-
-<p>
-    Gas IA Bolivia es una plataforma web desarrollada para mejorar el control,
-    monitoreo y trazabilidad de garrafas de GLP en Bolivia, permitiendo una
-    gestión eficiente de la información y facilitando el acceso a reportes
-    y registros del sistema.
+<p class="texto">
+    Gas IA Bolivia es una plataforma web desarrollada para mejorar el control de garrafas de GLP,
+    permitiendo organizar registros, visualizar información, monitorear estados y apoyar la toma
+    de decisiones mediante reportes y alertas del sistema.
 </p>
 ```
 
 </section>
 
-<section id="proyecto">
+<section>
+    <h2>Objetivo General</h2>
 
 ```
-<h2>Descripción del Proyecto</h2>
-
-<p>
-    El proyecto busca optimizar la administración de garrafas de gas mediante
-    herramientas tecnológicas que permitan registrar, monitorear y consultar
-    información en tiempo real.
-</p>
-
-<h2>Objetivo General</h2>
-
-<p>
-    Desarrollar un sistema web inteligente para la gestión y monitoreo de
-    garrafas de GLP utilizando tecnologías modernas de desarrollo web.
+<p class="texto">
+    Desarrollar un sistema web inteligente para la gestión, monitoreo y trazabilidad de garrafas
+    de GLP, utilizando tecnologías web modernas y una base de datos estructurada.
 </p>
 ```
 
 </section>
 
 <section id="modulos">
+    <h2>Módulos del Sistema</h2>
 
 ```
-<h2>Módulos del Sistema</h2>
+<div class="grid">
+    <div class="card">
+        <h3>📊 Dashboard</h3>
+        <p>Visualización general de indicadores, registros y actividad del sistema.</p>
+    </div>
 
-<div class="card">
-    <h3>📊 Dashboard</h3>
-    <p>Visualización general de indicadores y estadísticas.</p>
-</div>
+    <div class="card">
+        <h3>🛢️ Gestión de Garrafas</h3>
+        <p>Registro, consulta y administración de garrafas dentro de la plataforma.</p>
+    </div>
 
-<div class="card">
-    <h3>🛢 Gestión de Garrafas</h3>
-    <p>Registro, control y administración de garrafas.</p>
-</div>
+    <div class="card">
+        <h3>📡 Monitoreo</h3>
+        <p>Seguimiento del estado de las garrafas y control de información relevante.</p>
+    </div>
 
-<div class="card">
-    <h3>📡 Monitoreo</h3>
-    <p>Seguimiento y control de información en tiempo real.</p>
-</div>
+    <div class="card">
+        <h3>⚠️ Alertas IA</h3>
+        <p>Visualización de alertas relacionadas con eventos importantes del sistema.</p>
+    </div>
 
-<div class="card">
-    <h3>⚠ Alertas IA</h3>
-    <p>Generación de alertas y notificaciones inteligentes.</p>
-</div>
+    <div class="card">
+        <h3>📄 Reportes</h3>
+        <p>Generación de reportes para respaldar la gestión y consulta de información.</p>
+    </div>
 
-<div class="card">
-    <h3>📄 Reportes</h3>
-    <p>Generación de reportes en PDF y Excel.</p>
+    <div class="card">
+        <h3>👤 Usuarios</h3>
+        <p>Acceso mediante autenticación y control de usuarios autorizados.</p>
+    </div>
 </div>
 ```
 
 </section>
 
 <section id="capturas">
+    <h2>Vista del Sistema</h2>
 
 ```
-<h2>Capturas del Sistema</h2>
+<div class="captura">
+    <h3>Inicio de Sesión</h3>
+    <img src="LOGIN.png" alt="Login del sistema Gas IA Bolivia">
+</div>
 
-<img src="dashboard.png" alt="Dashboard">
-
-<img src="monitoreo.png" alt="Monitoreo">
-
-<img src="garrafas.png" alt="Garrafas">
-
-<img src="alertas.png" alt="Alertas">
+<div class="captura">
+    <h3>Monitoreo de Garrafas</h3>
+    <img src="MONITOREO.jpg" alt="Monitoreo del sistema Gas IA Bolivia">
+</div>
 ```
 
 </section>
 
 <section id="tecnologias">
+    <h2>Tecnologías Utilizadas</h2>
 
 ```
-<h2>Tecnologías Utilizadas</h2>
-
-<ul>
-    <li>Laravel</li>
-    <li>PHP</li>
-    <li>MySQL</li>
-    <li>HTML5</li>
-    <li>CSS3</li>
-    <li>Bootstrap</li>
-    <li>GitHub Pages</li>
-</ul>
+<div class="lista-tecnologias">
+    <span class="tech">Laravel</span>
+    <span class="tech">PHP</span>
+    <span class="tech">MySQL</span>
+    <span class="tech">HTML5</span>
+    <span class="tech">CSS3</span>
+    <span class="tech">Bootstrap</span>
+    <span class="tech">GitHub</span>
+    <span class="tech">GitHub Pages</span>
+</div>
 ```
 
 </section>
 
 <section id="equipo">
+    <h2>Integrante</h2>
 
 ```
-<h2>Integrante</h2>
-
-<p>Yonatan Flores Apaza</p>
+<p class="texto">
+    Yonatan Flores Apaza<br>
+    Ingeniería de Sistemas - ISI-511<br>
+    Universidad Privada Franz Tamayo
+</p>
 ```
 
 </section>
 
 <footer>
-
-```
-<p>
-    Ingeniería de Sistemas - Universidad Privada Franz Tamayo
-</p>
-
-<p>
-    Proyecto Gas IA Bolivia - Gestión 2026
-</p>
-```
-
+    <p>Proyecto Gas IA Bolivia - Gestión 2026</p>
+    <p>Landing Page publicada mediante GitHub Pages</p>
 </footer>
 
 </body>
