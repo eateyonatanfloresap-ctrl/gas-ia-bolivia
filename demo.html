@@ -1,10 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Demo Gas IA Bolivia</title>
+<meta charset="UTF-8">
+<title>Demo Gas IA Bolivia</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial;background:#071b33;color:white}
+.login,.app{min-height:100vh}
+.login{display:flex;justify-content:center;align-items:center;background:linear-gradient(135deg,#061529,#0b3d91)}
+.box{background:white;color:#111;padding:35px;border-radius:18px;width:350px;text-align:center}
+input{width:100%;padding:12px;margin:10px 0;border-radius:8px;border:1px solid #ccc}
+button{padding:12px 22px;border:0;border-radius:8px;background:#0d6efd;color:white;cursor:pointer;font-weight:bold}
+.app{display:none}
+.sidebar{width:240px;background:#020b16;position:fixed;height:100%;padding:25px}
+.sidebar h2{color:#4dd0ff;margin-bottom:25px}
+.sidebar a{display:block;color:white;text-decoration:none;padding:12px;margin:8px 0;background:#102a4c;border-radius:8px}
+.main{margin-left:260px;padding:30px}
+.card{background:#102a4c;padding:22px;border-radius:15px;margin:15px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+table{width:100%;border-collapse:collapse;background:#102a4c;border-radius:10px;overflow:hidden}
+th,td{padding:12px;border-bottom:1px solid #1f4f80;text-align:left}
+th{background:#0d6efd}
+.seccion{display:none}
+.activo{display:block}
+.badge{padding:6px 10px;border-radius:20px;background:#198754}
+.alerta{background:#dc3545}
+</style>
 </head>
+
 <body>
-    <h1>DEMO GAS IA BOLIVIA</h1>
-    <p>Prueba funcionando correctamente.</p>
+
+<div class="login" id="login">
+    <div class="box">
+        <h2>🔥 GAS IA BOLIVIA</h2>
+        <p>Demo del Sistema</p>
+        <input type="text" placeholder="Usuario" value="admin">
+        <input type="password" placeholder="Contraseña" value="123456">
+        <button onclick="entrar()">Ingresar</button>
+    </div>
+</div>
+
+<div class="app" id="app">
+    <div class="sidebar">
+        <h2>GAS IA</h2>
+        <a href="#" onclick="mostrar('dashboard')">📊 Dashboard</a>
+        <a href="#" onclick="mostrar('garrafas')">🛢 Garrafas</a>
+        <a href="#" onclick="mostrar('monitoreo')">📡 Monitoreo</a>
+        <a href="#" onclick="mostrar('alertas')">⚠ Alertas IA</a>
+        <a href="#" onclick="mostrar('reportes')">📄 Reportes</a>
+        <a href="#" onclick="salir()">🚪 Salir</a>
+    </div>
+
+    <div class="main">
+        <div id="dashboard" class="seccion activo">
+            <h1>Dashboard Principal</h1>
+            <div class="grid">
+                <div class="card"><h2>120</h2><p>Garrafas registradas</p></div>
+                <div class="card"><h2>35</h2><p>En distribución</p></div>
+                <div class="card"><h2>8</h2><p>Alertas activas</p></div>
+                <div class="card"><h2>15</h2><p>Reportes generados</p></div>
+            </div>
+        </div>
+
+        <div id="garrafas" class="seccion">
+            <h1>Gestión de Garrafas</h1>
+            <p class="card">Vista demostrativa. No permite agregar ni borrar datos reales.</p>
+            <table>
+                <tr><th>Código</th><th>Capacidad</th><th>Estado</th><th>Zona</th></tr>
+                <tr><td>GLP-001</td><td>10 Kg</td><td><span class="badge">Llena</span></td><td>El Alto</td></tr>
+                <tr><td>GLP-002</td><td>10 Kg</td><td>Vacía</td><td>La Paz</td></tr>
+                <tr><td>GLP-003</td><td>45 Kg</td><td>En tránsito</td><td>Viacha</td></tr>
+            </table>
+        </div>
+
+        <div id="monitoreo" class="seccion">
+            <h1>Monitoreo de Garrafas</h1>
+            <div class="card">
+                <h3>Ruta activa</h3>
+                <p>Camión distribuidor realizando entrega en zona urbana.</p>
+                <p>Estado: En seguimiento</p>
+            </div>
+            <div class="card">
+                <h3>Última actualización</h3>
+                <p>Garrafas verificadas correctamente en el sistema.</p>
+            </div>
+        </div>
+
+        <div id="alertas" class="seccion">
+            <h1>Alertas Inteligentes</h1>
+            <div class="card alerta">
+                <h3>⚠ Posible movimiento sospechoso</h3>
+                <p>Se detectó una cantidad inusual de garrafas en una misma zona.</p>
+            </div>
+            <div class="card">
+                <h3>✅ Control normal</h3>
+                <p>No existen alertas críticas adicionales.</p>
+            </div>
+        </div>
+
+        <div id="reportes" class="seccion">
+            <h1>Reportes</h1>
+            <div class="card">
+                <p>Reporte de garrafas registradas.</p>
+                <button>Generar PDF</button>
+                <button>Exportar Excel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function entrar(){
+    document.getElementById("login").style.display="none";
+    document.getElementById("app").style.display="block";
+}
+
+function salir(){
+    document.getElementById("app").style.display="none";
+    document.getElementById("login").style.display="flex";
+}
+
+function mostrar(id){
+    document.querySelectorAll(".seccion").forEach(s=>s.classList.remove("activo"));
+    document.getElementById(id).classList.add("activo");
+}
+</script>
+
 </body>
 </html>
