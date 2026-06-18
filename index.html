@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -6,7 +7,11 @@
 <title>Gas IA Bolivia</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 body{
     font-family:Arial, sans-serif;
@@ -17,7 +22,7 @@ body{
 header{
     min-height:100vh;
     background:
-        linear-gradient(rgba(3,15,35,.80), rgba(3,15,35,.90)),
+        linear-gradient(rgba(3,15,35,.82), rgba(3,15,35,.92)),
         url("LOGIN.png");
     background-size:cover;
     background-position:center;
@@ -30,14 +35,18 @@ header{
 
 .hero{
     max-width:950px;
-    background:rgba(0,0,0,.25);
+    background:rgba(0,0,0,.30);
     padding:45px;
     border-radius:25px;
-    border:1px solid rgba(77,208,255,.25);
+    border:1px solid rgba(77,208,255,.28);
     backdrop-filter:blur(6px);
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
 }
 
-.logo{font-size:70px;margin-bottom:15px}
+.logo{
+    font-size:72px;
+    margin-bottom:15px;
+}
 
 h1{
     font-size:58px;
@@ -45,7 +54,9 @@ h1{
     margin-bottom:15px;
 }
 
-.resaltado{color:#4dd0ff}
+.resaltado{
+    color:#4dd0ff;
+}
 
 .subtitulo{
     font-size:22px;
@@ -53,7 +64,9 @@ h1{
     line-height:1.6;
 }
 
-.tags{margin:30px 0}
+.tags{
+    margin:30px 0;
+}
 
 .tag{
     display:inline-block;
@@ -66,7 +79,9 @@ h1{
     font-weight:bold;
 }
 
-.botones{margin-top:35px}
+.botones{
+    margin-top:35px;
+}
 
 .btn{
     display:inline-block;
@@ -78,13 +93,25 @@ h1{
     margin:10px;
     font-size:18px;
     box-shadow:0 10px 25px rgba(0,0,0,.35);
+    transition:.3s;
 }
 
-.azul{background:linear-gradient(135deg,#0d6efd,#00b4d8)}
-.verde{background:linear-gradient(135deg,#198754,#20c997)}
-.rojo{background:linear-gradient(135deg,#dc3545,#ff7b7b)}
+.btn:hover{
+    transform:translateY(-4px) scale(1.04);
+    opacity:.95;
+}
 
-.btn:hover{transform:scale(1.05)}
+.azul{
+    background:linear-gradient(135deg,#0d6efd,#00b4d8);
+}
+
+.verde{
+    background:linear-gradient(135deg,#198754,#20c997);
+}
+
+.rojo{
+    background:linear-gradient(135deg,#dc3545,#ff7b7b);
+}
 
 nav{
     position:sticky;
@@ -93,6 +120,7 @@ nav{
     padding:18px;
     text-align:center;
     z-index:10;
+    border-bottom:1px solid rgba(77,208,255,.25);
 }
 
 nav a{
@@ -100,6 +128,10 @@ nav a{
     text-decoration:none;
     margin:0 14px;
     font-weight:bold;
+}
+
+nav a:hover{
+    color:#4dd0ff;
 }
 
 section{
@@ -134,15 +166,24 @@ h2{
     padding:25px;
     border-radius:18px;
     border:1px solid rgba(77,208,255,.25);
+    box-shadow:0 10px 35px rgba(0,0,0,.22);
 }
 
-.card h3{margin-bottom:12px}
+.card h3{
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#d6eaff;
+    line-height:1.6;
+}
 
 .captura{
     background:rgba(255,255,255,.08);
     padding:20px;
     border-radius:18px;
     margin-top:35px;
+    border:1px solid rgba(77,208,255,.25);
 }
 
 .captura h3{
@@ -157,6 +198,7 @@ img{
     display:block;
     margin:auto;
     border-radius:15px;
+    box-shadow:0 15px 45px rgba(0,0,0,.45);
 }
 
 .tech{
@@ -175,8 +217,26 @@ footer{
     text-align:center;
     padding:35px 20px;
     color:#d6eaff;
+    border-top:1px solid rgba(77,208,255,.25);
+}
+
+@media(max-width:700px){
+    h1{
+        font-size:38px;
+    }
+
+    .subtitulo{
+        font-size:18px;
+    }
+
+    .btn{
+        display:block;
+        margin:12px auto;
+        width:90%;
+    }
 }
 </style>
+
 </head>
 
 <body>
@@ -185,33 +245,36 @@ footer{
     <div class="hero">
         <div class="logo">🔥</div>
 
-        <h1>GAS IA <span class="resaltado">BOLIVIA</span></h1>
+```
+    <h1>GAS IA <span class="resaltado">BOLIVIA</span></h1>
 
-        <p class="subtitulo">
-            Sistema inteligente para el monitoreo, trazabilidad y gestión de garrafas de GLP en Bolivia.
-        </p>
+    <p class="subtitulo">
+        Sistema inteligente para el monitoreo, trazabilidad y gestión de garrafas de GLP en Bolivia.
+    </p>
 
-        <div class="tags">
-            <span class="tag">Laravel</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">Monitoreo</span>
-            <span class="tag">Alertas IA</span>
-            <span class="tag">GitHub Pages</span>
-        </div>
-
-        <div class="botones">
-            <a class="btn azul" href="#capturas">🖥️ Ver Sistema</a>
-            <a class="btn verde" href="YONATANFLORES-H5.pdf" target="_blank">📄 Ver Informe</a>
-            <a class="btn rojo" href="YONATANFLORES-H5.pdf" download>⬇️ Descargar Informe</a>
-        </div>
+    <div class="tags">
+        <span class="tag">Laravel</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">Monitoreo</span>
+        <span class="tag">Alertas IA</span>
+        <span class="tag">GitHub Pages</span>
     </div>
+
+    <div class="botones">
+        <a class="btn azul" href="demo.html" target="_blank">🖥️ Ver Demo del Sistema</a>
+        <a class="btn verde" href="YONATANFLORES-H5.pdf" target="_blank">📄 Ver Informe</a>
+        <a class="btn rojo" href="YONATANFLORES-H5.pdf" download>⬇️ Descargar Informe</a>
+    </div>
+</div>
+```
+
 </header>
 
 <nav>
     <a href="#inicio">Inicio</a>
     <a href="#proyecto">Proyecto</a>
     <a href="#modulos">Módulos</a>
-    <a href="#capturas">Sistema</a>
+    <a href="#vista">Vista</a>
     <a href="#tecnologias">Tecnologías</a>
     <a href="#equipo">Equipo</a>
 </nav>
@@ -227,50 +290,93 @@ footer{
 
 <section id="modulos">
     <h2>Módulos del Sistema</h2>
-    <div class="grid">
-        <div class="card"><h3>📊 Dashboard</h3><p>Visualización general de indicadores.</p></div>
-        <div class="card"><h3>🛢️ Gestión de Garrafas</h3><p>Registro y administración de garrafas.</p></div>
-        <div class="card"><h3>📡 Monitoreo</h3><p>Seguimiento del estado de las garrafas.</p></div>
-        <div class="card"><h3>⚠️ Alertas IA</h3><p>Alertas relacionadas con eventos importantes.</p></div>
-        <div class="card"><h3>📄 Reportes</h3><p>Reportes para la gestión de información.</p></div>
-        <div class="card"><h3>👤 Usuarios</h3><p>Acceso mediante autenticación.</p></div>
+
+```
+<div class="grid">
+    <div class="card">
+        <h3>📊 Dashboard</h3>
+        <p>Visualización general de indicadores, registros y actividad del sistema.</p>
     </div>
+
+    <div class="card">
+        <h3>🛢️ Gestión de Garrafas</h3>
+        <p>Registro, consulta y administración de garrafas dentro de la plataforma.</p>
+    </div>
+
+    <div class="card">
+        <h3>📡 Monitoreo</h3>
+        <p>Seguimiento del estado de las garrafas y control de información relevante.</p>
+    </div>
+
+    <div class="card">
+        <h3>⚠️ Alertas IA</h3>
+        <p>Visualización de alertas relacionadas con eventos importantes del sistema.</p>
+    </div>
+
+    <div class="card">
+        <h3>📄 Reportes</h3>
+        <p>Generación de reportes para respaldar la gestión y consulta de información.</p>
+    </div>
+
+    <div class="card">
+        <h3>👤 Usuarios</h3>
+        <p>Acceso mediante autenticación y control de usuarios autorizados.</p>
+    </div>
+</div>
+```
+
 </section>
 
-<section id="capturas">
+<section id="vista">
     <h2>Vista del Sistema</h2>
 
-    <div class="captura">
-        <h3>Inicio de Sesión</h3>
-        <img src="LOGIN.png" alt="Login del sistema">
-    </div>
+```
+<p class="texto">
+    La demostración interactiva permite visualizar el funcionamiento general del sistema sin modificar datos reales.
+</p>
 
-    <div class="captura">
-        <h3>Monitoreo de Garrafas</h3>
-        <img src="MONITOREO.jpg" alt="Monitoreo del sistema">
-    </div>
+<div class="captura">
+    <h3>Inicio de Sesión</h3>
+    <img src="LOGIN.png" alt="Login del sistema Gas IA Bolivia">
+</div>
+
+<div class="captura">
+    <h3>Monitoreo de Garrafas</h3>
+    <img src="MONITOREO.jpg" alt="Monitoreo del sistema Gas IA Bolivia">
+</div>
+```
+
 </section>
 
 <section id="tecnologias">
     <h2>Tecnologías Utilizadas</h2>
-    <div style="text-align:center">
-        <span class="tech">Laravel</span>
-        <span class="tech">PHP</span>
-        <span class="tech">MySQL</span>
-        <span class="tech">HTML5</span>
-        <span class="tech">CSS3</span>
-        <span class="tech">Bootstrap</span>
-        <span class="tech">GitHub Pages</span>
-    </div>
+
+```
+<div style="text-align:center">
+    <span class="tech">Laravel</span>
+    <span class="tech">PHP</span>
+    <span class="tech">MySQL</span>
+    <span class="tech">HTML5</span>
+    <span class="tech">CSS3</span>
+    <span class="tech">Bootstrap</span>
+    <span class="tech">GitHub</span>
+    <span class="tech">GitHub Pages</span>
+</div>
+```
+
 </section>
 
 <section id="equipo">
     <h2>Integrante</h2>
-    <p class="texto">
-        Yonatan Flores Apaza<br>
-        Ingeniería de Sistemas - ISI-511<br>
-        Universidad Privada Franz Tamayo
-    </p>
+
+```
+<p class="texto">
+    Yonatan Flores Apaza<br>
+    Ingeniería de Sistemas - ISI-511<br>
+    Universidad Privada Franz Tamayo
+</p>
+```
+
 </section>
 
 <footer>
