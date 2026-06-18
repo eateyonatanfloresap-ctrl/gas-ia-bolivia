@@ -6,197 +6,67 @@
 <title>Gas IA Bolivia</title>
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
-
-body{
-background:#061529;
-color:white;
-}
+body{background:#061529;color:white}
 
 header{
 min-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
-url("LOGIN.png");
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:40px;
+background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),url("LOGIN.png");
+background-size:cover;background-position:center;
+display:flex;justify-content:center;align-items:center;text-align:center;padding:40px;
 }
 
-.hero{
-max-width:1000px;
-}
-
-.logo{
-font-size:80px;
-margin-bottom:20px;
-}
-
-.hero h1{
-font-size:70px;
-margin-bottom:20px;
-}
-
-.azul{
-color:#43c7ff;
-}
-
-.hero p{
-font-size:24px;
-line-height:1.6;
-margin-bottom:30px;
-}
-
-.tags{
-margin-bottom:40px;
-}
-
-.tag{
-display:inline-block;
-padding:12px 25px;
-margin:6px;
-border:1px solid #43c7ff;
-border-radius:30px;
-color:#43c7ff;
-}
-
-.botones{
-margin-top:30px;
-}
+.hero{max-width:1000px}
+.logo{font-size:80px;margin-bottom:20px}
+.hero h1{font-size:70px;margin-bottom:20px}
+.azul{color:#43c7ff}
+.hero p{font-size:24px;line-height:1.6;margin-bottom:30px}
+.tags{margin-bottom:40px}
+.tag{display:inline-block;padding:12px 25px;margin:6px;border:1px solid #43c7ff;border-radius:30px;color:#43c7ff}
+.botones{margin-top:30px}
 
 .btn{
-display:inline-block;
-padding:16px 35px;
-border-radius:12px;
-text-decoration:none;
-font-size:18px;
-font-weight:bold;
-color:white;
-margin:10px;
-transition:.3s;
+display:inline-block;padding:16px 35px;border-radius:12px;text-decoration:none;
+font-size:18px;font-weight:bold;color:white;margin:10px;transition:.3s;
 }
+.btn:hover{transform:scale(1.05)}
+.btn-demo{background:linear-gradient(45deg,#0d6efd,#00b4ff)}
+.btn-informe{background:linear-gradient(45deg,#198754,#20c997)}
 
-.btn:hover{
-transform:scale(1.05);
+nav{background:#03111f;padding:20px;text-align:center;position:sticky;top:0;z-index:100}
+nav a{color:white;text-decoration:none;margin:0 15px;font-weight:bold}
+
+section{padding:80px 30px;max-width:1200px;margin:auto}
+h2{text-align:center;font-size:40px;margin-bottom:30px;color:#43c7ff}
+.texto{text-align:center;font-size:20px;line-height:1.8;color:#d5e8ff}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;margin-top:40px}
+.card{background:#0d223d;padding:25px;border-radius:15px;border:1px solid rgba(255,255,255,.1)}
+.card h3{margin-bottom:10px;color:#43c7ff}
+
+.imagen-box{margin-top:40px;text-align:center}
+.imagen-box img{
+width:100%;max-width:1100px;border-radius:15px;
+box-shadow:0 15px 45px rgba(0,0,0,.45);margin-bottom:35px;
 }
+.imagen-box h3{color:#43c7ff;margin-bottom:15px;font-size:26px}
 
-.btn-demo{
-background:linear-gradient(45deg,#0d6efd,#00b4ff);
-}
+.tech{display:inline-block;padding:12px 25px;margin:8px;border-radius:30px;border:1px solid #43c7ff;color:#43c7ff}
 
-.btn-informe{
-background:linear-gradient(45deg,#198754,#20c997);
-}
-
-nav{
-background:#03111f;
-padding:20px;
-text-align:center;
-position:sticky;
-top:0;
-z-index:100;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:0 15px;
-font-weight:bold;
-}
-
-section{
-padding:80px 30px;
-max-width:1200px;
-margin:auto;
-}
-
-h2{
-text-align:center;
-font-size:40px;
-margin-bottom:30px;
-color:#43c7ff;
-}
-
-.texto{
-text-align:center;
-font-size:20px;
-line-height:1.8;
-color:#d5e8ff;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.card{
-background:#0d223d;
-padding:25px;
-border-radius:15px;
-border:1px solid rgba(255,255,255,.1);
-}
-
-.card h3{
-margin-bottom:10px;
-color:#43c7ff;
-}
-
-.arquitectura{
-margin-top:40px;
-text-align:center;
-}
-
-.arquitectura img{
-width:100%;
-max-width:1100px;
-border-radius:15px;
-}
-
-.tech{
-display:inline-block;
-padding:12px 25px;
-margin:8px;
-border-radius:30px;
-border:1px solid #43c7ff;
-color:#43c7ff;
-}
-
-footer{
-background:#020b16;
-padding:30px;
-text-align:center;
-margin-top:50px;
-}
-
+footer{background:#020b16;padding:30px;text-align:center;margin-top:50px}
 </style>
-
 </head>
 
 <body>
 
 <header>
-
 <div class="hero">
-
 <div class="logo">🔥</div>
 
 <h1>GAS IA <span class="azul">BOLIVIA</span></h1>
 
-<p>
-Sistema Inteligente para el Monitoreo, Trazabilidad y Gestión de Garrafas de GLP en Bolivia
-</p>
+<p>Sistema Inteligente para el Monitoreo, Trazabilidad y Gestión de Garrafas de GLP en Bolivia</p>
 
 <div class="tags">
 <span class="tag">Laravel</span>
@@ -207,99 +77,66 @@ Sistema Inteligente para el Monitoreo, Trazabilidad y Gestión de Garrafas de GL
 </div>
 
 <div class="botones">
-
-<a href="demo.html" target="_blank" class="btn btn-demo">
-🖥️ Ver Demo del Sistema
-</a>
-
-<a href="informe.html" target="_blank" class="btn btn-informe">
-📄 Ver Informe
-</a>
-
+<a href="demo.html" target="_blank" class="btn btn-demo">🖥️ Ver Demo del Sistema</a>
+<a href="informe.html" target="_blank" class="btn btn-informe">📄 Ver Informe</a>
 </div>
-
 </div>
-
 </header>
 
 <nav>
 <a href="#proyecto">Proyecto</a>
 <a href="#modulos">Módulos</a>
 <a href="#arquitectura">Arquitectura</a>
+<a href="#capturas">Capturas</a>
 <a href="#tecnologias">Tecnologías</a>
 <a href="#equipo">Equipo</a>
 </nav>
 
 <section id="proyecto">
-
 <h2>Proyecto</h2>
-
 <p class="texto">
 Gas IA Bolivia es una plataforma web desarrollada para mejorar el control,
 seguimiento y administración de garrafas de GLP mediante herramientas
 tecnológicas orientadas a la trazabilidad, monitoreo y generación de reportes.
 </p>
-
 </section>
 
 <section id="modulos">
-
 <h2>Módulos del Sistema</h2>
 
 <div class="grid">
-
-<div class="card">
-<h3>📊 Dashboard</h3>
-<p>Visualización general del sistema.</p>
+<div class="card"><h3>📊 Dashboard</h3><p>Visualización general del sistema.</p></div>
+<div class="card"><h3>🛢️ Gestión de Garrafas</h3><p>Registro y administración de garrafas.</p></div>
+<div class="card"><h3>📡 Monitoreo</h3><p>Seguimiento del estado de las garrafas.</p></div>
+<div class="card"><h3>⚠️ Alertas IA</h3><p>Generación de alertas inteligentes.</p></div>
+<div class="card"><h3>📄 Reportes</h3><p>Exportación PDF y Excel.</p></div>
+<div class="card"><h3>👤 Usuarios</h3><p>Acceso mediante autenticación.</p></div>
 </div>
-
-<div class="card">
-<h3>🛢️ Gestión de Garrafas</h3>
-<p>Registro y administración de garrafas.</p>
-</div>
-
-<div class="card">
-<h3>📡 Monitoreo</h3>
-<p>Seguimiento del estado de las garrafas.</p>
-</div>
-
-<div class="card">
-<h3>⚠️ Alertas IA</h3>
-<p>Generación de alertas inteligentes.</p>
-</div>
-
-<div class="card">
-<h3>📄 Reportes</h3>
-<p>Exportación PDF y Excel.</p>
-</div>
-
-<div class="card">
-<h3>👤 Usuarios</h3>
-<p>Acceso mediante autenticación.</p>
-</div>
-
-</div>
-
 </section>
 
 <section id="arquitectura">
-
 <h2>Arquitectura del Sistema</h2>
-
-<div class="arquitectura">
-
+<div class="imagen-box">
 <img src="ARQUITECTURA.png" alt="Arquitectura del Sistema">
-
 </div>
+</section>
 
+<section id="capturas">
+<h2>Capturas del Sistema</h2>
+
+<div class="imagen-box">
+<h3>Inicio de Sesión</h3>
+<img src="LOGIN.png" alt="Login Gas IA Bolivia">
+
+<h3>Monitoreo de Garrafas</h3>
+<img src="MONITOREO.jpg" alt="Monitoreo Gas IA Bolivia">
+</div>
 </section>
 
 <section id="tecnologias">
-
 <h2>Tecnologías Utilizadas</h2>
 
 <div style="text-align:center">
-
 <span class="tech">Laravel</span>
 <span class="tech">PHP</span>
 <span class="tech">MySQL</span>
@@ -307,13 +144,10 @@ tecnológicas orientadas a la trazabilidad, monitoreo y generación de reportes.
 <span class="tech">CSS3</span>
 <span class="tech">Bootstrap</span>
 <span class="tech">GitHub Pages</span>
-
 </div>
-
 </section>
 
 <section id="equipo">
-
 <h2>Integrante</h2>
 
 <p class="texto">
@@ -321,15 +155,176 @@ Yonatan Flores Apaza<br>
 Ingeniería de Sistemas<br>
 Universidad Privada Franz Tamayo
 </p>
-
 </section>
 
 <footer>
-
 <p>Proyecto Gas IA Bolivia - Gestión 2026</p>
-
 <p>Landing Page desarrollada para Ingeniería de Sistemas</p>
+</footer>
 
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gas IA Bolivia</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+
+body{background:#061529;color:white}
+
+header{
+min-height:100vh;
+background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),url("LOGIN.png");
+background-size:cover;background-position:center;
+display:flex;justify-content:center;align-items:center;text-align:center;padding:40px;
+}
+
+.hero{max-width:1000px}
+.logo{font-size:80px;margin-bottom:20px}
+.hero h1{font-size:70px;margin-bottom:20px}
+.azul{color:#43c7ff}
+.hero p{font-size:24px;line-height:1.6;margin-bottom:30px}
+.tags{margin-bottom:40px}
+.tag{display:inline-block;padding:12px 25px;margin:6px;border:1px solid #43c7ff;border-radius:30px;color:#43c7ff}
+.botones{margin-top:30px}
+
+.btn{
+display:inline-block;padding:16px 35px;border-radius:12px;text-decoration:none;
+font-size:18px;font-weight:bold;color:white;margin:10px;transition:.3s;
+}
+.btn:hover{transform:scale(1.05)}
+.btn-demo{background:linear-gradient(45deg,#0d6efd,#00b4ff)}
+.btn-informe{background:linear-gradient(45deg,#198754,#20c997)}
+
+nav{background:#03111f;padding:20px;text-align:center;position:sticky;top:0;z-index:100}
+nav a{color:white;text-decoration:none;margin:0 15px;font-weight:bold}
+
+section{padding:80px 30px;max-width:1200px;margin:auto}
+h2{text-align:center;font-size:40px;margin-bottom:30px;color:#43c7ff}
+.texto{text-align:center;font-size:20px;line-height:1.8;color:#d5e8ff}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;margin-top:40px}
+.card{background:#0d223d;padding:25px;border-radius:15px;border:1px solid rgba(255,255,255,.1)}
+.card h3{margin-bottom:10px;color:#43c7ff}
+
+.imagen-box{margin-top:40px;text-align:center}
+.imagen-box img{
+width:100%;max-width:1100px;border-radius:15px;
+box-shadow:0 15px 45px rgba(0,0,0,.45);margin-bottom:35px;
+}
+.imagen-box h3{color:#43c7ff;margin-bottom:15px;font-size:26px}
+
+.tech{display:inline-block;padding:12px 25px;margin:8px;border-radius:30px;border:1px solid #43c7ff;color:#43c7ff}
+
+footer{background:#020b16;padding:30px;text-align:center;margin-top:50px}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="hero">
+<div class="logo">🔥</div>
+
+<h1>GAS IA <span class="azul">BOLIVIA</span></h1>
+
+<p>Sistema Inteligente para el Monitoreo, Trazabilidad y Gestión de Garrafas de GLP en Bolivia</p>
+
+<div class="tags">
+<span class="tag">Laravel</span>
+<span class="tag">PHP</span>
+<span class="tag">MySQL</span>
+<span class="tag">Monitoreo</span>
+<span class="tag">Alertas IA</span>
+</div>
+
+<div class="botones">
+<a href="demo.html" target="_blank" class="btn btn-demo">🖥️ Ver Demo del Sistema</a>
+<a href="informe.html" target="_blank" class="btn btn-informe">📄 Ver Informe</a>
+</div>
+</div>
+</header>
+
+<nav>
+<a href="#proyecto">Proyecto</a>
+<a href="#modulos">Módulos</a>
+<a href="#arquitectura">Arquitectura</a>
+<a href="#capturas">Capturas</a>
+<a href="#tecnologias">Tecnologías</a>
+<a href="#equipo">Equipo</a>
+</nav>
+
+<section id="proyecto">
+<h2>Proyecto</h2>
+<p class="texto">
+Gas IA Bolivia es una plataforma web desarrollada para mejorar el control,
+seguimiento y administración de garrafas de GLP mediante herramientas
+tecnológicas orientadas a la trazabilidad, monitoreo y generación de reportes.
+</p>
+</section>
+
+<section id="modulos">
+<h2>Módulos del Sistema</h2>
+
+<div class="grid">
+<div class="card"><h3>📊 Dashboard</h3><p>Visualización general del sistema.</p></div>
+<div class="card"><h3>🛢️ Gestión de Garrafas</h3><p>Registro y administración de garrafas.</p></div>
+<div class="card"><h3>📡 Monitoreo</h3><p>Seguimiento del estado de las garrafas.</p></div>
+<div class="card"><h3>⚠️ Alertas IA</h3><p>Generación de alertas inteligentes.</p></div>
+<div class="card"><h3>📄 Reportes</h3><p>Exportación PDF y Excel.</p></div>
+<div class="card"><h3>👤 Usuarios</h3><p>Acceso mediante autenticación.</p></div>
+</div>
+</section>
+
+<section id="arquitectura">
+<h2>Arquitectura del Sistema</h2>
+<div class="imagen-box">
+<img src="ARQUITECTURA.png" alt="Arquitectura del Sistema">
+</div>
+</section>
+
+<section id="capturas">
+<h2>Capturas del Sistema</h2>
+
+<div class="imagen-box">
+<h3>Inicio de Sesión</h3>
+<img src="LOGIN.png" alt="Login Gas IA Bolivia">
+
+<h3>Monitoreo de Garrafas</h3>
+<img src="MONITOREO.jpg" alt="Monitoreo Gas IA Bolivia">
+</div>
+</section>
+
+<section id="tecnologias">
+<h2>Tecnologías Utilizadas</h2>
+
+<div style="text-align:center">
+<span class="tech">Laravel</span>
+<span class="tech">PHP</span>
+<span class="tech">MySQL</span>
+<span class="tech">HTML5</span>
+<span class="tech">CSS3</span>
+<span class="tech">Bootstrap</span>
+<span class="tech">GitHub Pages</span>
+</div>
+</section>
+
+<section id="equipo">
+<h2>Integrante</h2>
+
+<p class="texto">
+Yonatan Flores Apaza<br>
+Ingeniería de Sistemas<br>
+Universidad Privada Franz Tamayo
+</p>
+</section>
+
+<footer>
+<p>Proyecto Gas IA Bolivia - Gestión 2026</p>
+<p>Landing Page desarrollada para Ingeniería de Sistemas</p>
 </footer>
 
 </body>
